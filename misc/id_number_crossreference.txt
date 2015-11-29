@@ -1,0 +1,8 @@
+from sys import argv
+
+script, ids_peoplesoft, ids_orbis, output_file = argv
+
+def main():
+	control_list = open(ids_peoplesoft, 'r')
+	check_list = (ids_orbis, 'w')
+	for id in check_list.readline

@@ -1,0 +1,117 @@
+Script started on Wed 14 Jan 2015 07:46:54 PM MST
+]0;lkhedlun@csd:~[?1034h[lkhedlun@csd ~]$ ls
+readme.txt  typescript  [0m[38;5;27mW15[0m
+]0;lkhedlun@csd:~[lkhedlun@csd ~]$ pwd
+/home/uga/lkhedlun
+]0;lkhedlun@csd:~[lkhedlun@csd ~]$ mkdir 231
+]0;lkhedlun@csd:~[lkhedlun@csd ~]$ ls
+[0m[38;5;27m231[0m  readme.txt  typescript  [38;5;27mW15[0m
+]0;lkhedlun@csd:~[lkhedlun@csd ~]$ cd /home/231
+]0;lkhedlun@csd:/home/231[lkhedlun@csd 231]$ pwd
+/home/231
+]0;lkhedlun@csd:/home/231[lkhedlun@csd 231]$ ls
+[0m[38;5;27massignments[0m  [38;5;27mexamples[0m  [38;5;27mtamj_restore[0m  [38;5;27mtamj_W2014[0m  [38;5;27mtutorials[0m
+]0;lkhedlun@csd:/home/231[lkhedlun@csd 231]$ cd assignments/assignment1
+]0;lkhedlun@csd:/home/231/assignments/assignment1[lkhedlun@csd assignment1]$ cat index.txt
+Computer Science I for majors by James Tam 
+Return to the course web page
+ 
+
+CPSC 231: Assignment 1
+
+Due Friday September 26 at 4 PM
+Computer Science I for majors by James Tam 
+Return to the course web page
+ 
+
+CPSC 231: Assignment 1
+
+Due Friday September 26 at 4 PM
+
+Min raw score Grade point 
+61 4.0 
+60 3.9 
+59 3.8 
+58 3.7 
+57 3.6 
+56 3.5 
+55 3.4 
+54 3.3 
+53 3.2 
+52 3.1 
+51 3.0 
+49 2.9 
+47 2.8 
+45 2.7 
+43 2.6 
+41 2.5 
+39 2.4 
+37 2.3 
+35 2.2 
+33 2.1 
+31 2.0 
+29 1.9 
+27 1.8 
+25 1.7 
+23 1.6 
+21 1.5 
+19 1.4 
+17 1.3 
+15 1.2 
+13 1.1 
+11 1.0 
+9 0.7 
+Less than 9 0.0 
+
+New Concepts to be applied for the assignment
+�Learning how to complete common tasks using UNIX and creating a complete Python program from the ground up
+
+Part I: Introduction to UNIX, using common commands (30 marks: each graded step is worth 2 marks)
+
+On the UNIX workstations in the Computer Science lab complete the following steps. (JT: creating a typescript file literally records everything: output shown onscreen as well as every character that you type into a text file. Pressing the backspace or delete key will not delete what's recorded into the file, instead that keyboard character will be translated to a gibberish character. If you make a typographical error then DON'T try to delete it during the typescript. Instead just hit enter once or twice - so there will be a few blank lines in the script file - and then re-enter the command properly. Also you will create a directory called '231' under your home directory, this is not the same as the official course directory which is located under /home/231. Don't mix the two up!)
+1.Login to your UNIX account*
+2. Start a script session *
+3. Show the contents of your home directory (1 mark)
+4. Show your location (path) in the UNIX file system (1 mark)
+5.Make a new directory called '231' (1 mark)
+6.Show the contents of your home directory (1 mark)
+7. Go to the official course directory for CPSC 231 (/home/231) (1 mark)
+8. Show your location (path) in the UNIX file system (1 mark)
+9. Show the contents of the official CPSC 231 directory (1 mark)
+10. Go to the directory for the CPSC 231 Assignment 1 (/home/231/assignments/assignment1) (1 mark)
+11. Display the contents of the file called 'index.txt' onscreen (JT's hint for this step: don't try to view it with an editor such as 'emacs' or 'vi'). (1 mark)
+12. Try to delete the 'index.txt' file [JT's Hint: you aren't supposed to be able to complete this step successfully but instead you should get an error message. Take away learning: you only have limited file permissions in the course directory] (1 mark) 
+13. Copy the 'index.txt' file to the newly created '231' directory that you created in your home directory (1 mark)
+14. Go to the '231' directory that is located in your home directory (1 mark)
+15. Show the contents of the '231' directory.  (It should include the file 'index.txt' now.) (1 mark)
+16. Delete the 'index.txt' file from your 231 directory [JT's comment: it should work now because it's a directory that you created not the course directory] (1 mark)
+17. Show the contents of the '231' directory.  (The file should be gone now.) (1 mark)
+18. End the script session*
+19. Submit your assignment (the file called "typescript" using D2L described on the course web page [D2L link]).*
+
+The lines marked with a star '*' don't directly yield any marks but must still be completed in order for Part 1 of the assignment to be marked. You will either receive full marks on a step in Part I or no credit. You don't need to include contact information in the typescript (partly because some of it will be displayed in Step #4 but mostly because you will be including this information in Part II).
+
+Part II: Creating your first Python program (31 marks)
+
+Write a Python program that will calculate your term grade point based on the weights specified in the course admin notes (slide 18 - 20): [PowerPoint file] [PDF file]. The program will prompt the user for the grade point for each component and calculate the weighted grade point for that component. Finally the program will display the weighted grade points for the 4 major components: mini assignments, regular assignments, midterm and the final exam. This output must appear at the very end of your program with each weighed grade on it's own line (see image). Weighted grade points should only display two places of precision for the rational component (although all rational digits can be used when performing calculations - no rounding is needed this is just for the formatting of output). All output should be neat and presentable. You should employ good naming conventions for variable names and be sure to include the required contact information (your name, student identification number and tutorial number) in the header of the program. Your program doesn't have to error check the type of input (i.e., if the user enters a non-numeric value by mistake) nor does it have to error check the range (i.e., the person enters a grade point beyond the valid range of values). JT's final hint: don't try to type in the whole program all at once, especially when calculating and displaying all the assignment grades. Try it for just one component, make sure it works before adding the information for the other components.
+
+
+Program feature (Part II) Marks 
+Prompts for each component (6 mini assignments, 5 full assignments, 2 exams): 1 mark each 13 
+Correctly calculates and displays weighted grades for each component (mini-assignment, full assignment, midterm exam, final exam): 2 marks for each component calculated and displayed 8 
+Correctly calculates and displays overall term grade point (individual weighted values must be correct) 2 
+The display of each weighted grade point only shows two rational digits: 5 grades displayed with each output worth 1 mark 5 
+Required contact information included in the program documentation (name, student identification, tutorial number) 3 
+Total for Part II 31 ]0;lkhedlun@csd:/home/231/assignments/assignment1[lkhedlun@csd assignment1]$ rm index.txt
+rm: remove write-protected regular file ‘index.txt’? y
+rm: cannot remove ‘index.txt’: Permission denied
+]0;lkhedlun@csd:/home/231/assignments/assignment1[lkhedlun@csd assignment1]$ cp index.txt ~lkhedlun/231
+]0;lkhedlun@csd:/home/231/assignments/assignment1[lkhedlun@csd assignment1]$ cd ~/231
+]0;lkhedlun@csd:~/231[lkhedlun@csd 231]$ ls
+[0m[38;5;34mindex.txt[0m
+]0;lkhedlun@csd:~/231[lkhedlun@csd 231]$ rm index.txt
+]0;lkhedlun@csd:~/231[lkhedlun@csd 231]$ ls
+]0;lkhedlun@csd:~/231[lkhedlun@csd 231]$ exit
+exit
+
+Script done on Wed 14 Jan 2015 07:48:37 PM MST

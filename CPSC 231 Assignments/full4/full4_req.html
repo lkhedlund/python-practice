@@ -1,0 +1,621 @@
+<html>
+  
+<!-- Mirrored from pages.cpsc.ucalgary.ca/~tamj/231/assignments/assignment4/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Dec 2014 04:10:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+    <meta name="ProgId" content="FrontPage.Editor.Document">
+    <title>CPSC 231: Assignment 4</title>
+    <style>
+<!--
+p
+	{font-size:12.0pt;
+	font-family:"Times New Roman";
+	}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+  </head>
+  <body>
+    <div class="Section1">
+      <table id="table24" border="0" width="100%">
+        <tbody>
+          <tr>
+            <td width="60%">Computer Science I for majors by <a href="http://pages.cpsc.ucalgary.ca/~tamj">James
+                Tam</a></td>
+            <td width="39%">
+              <p align="right"> <a href="../../index.html">Return
+                  to the course web page</a></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 align="center">CPSC 231: Assignment 4</h2>
+    </div>
+    <h3>New concepts to be applied for the assignment</h3>
+    <ol>
+      <li>Complex program design<sup>, </sup>problem solving a non-trivial
+        problem<sup>1</sup></li>
+      <li>2D lists</li>
+      <li>File input</li>
+    </ol>
+    <p>(Although functions are not a new concept to be applied for this 
+	assignment your program <b>must</b> be decomposed into functions using &quot;good 
+	style&quot; Slide No. 80 - 82 ('decomposition' notes) and documented as specified 
+	on Slide #76. Otherwise you will be penalized heavily for functionality and 
+	documentation.</p>
+    <span style="FONT-WEIGHT: 400">
+      <h3>Writing a simple adventure game:</h3>
+      <h4><span style="font-weight: 400">For this assignment you are to write a
+          text-based adventure game based on 'The Simpsons Movie'<font face="Times New Roman">
+            &copy; Fox. The game world will be modeled as a 20<span style="color: #009900;">x</span>30
+            two-dimensional list. Sample program output is shown below:</font></span></h4>
+      <table id="table11" border="0" cellpadding="2" width="100%">
+        <tbody>
+          <tr>
+            <td width="17">&nbsp;</td>
+            <td colspan="2">
+			<img src="simpsons.jpg" border="0" height="402" width="444"></td>
+          </tr>
+          <tr>
+            <td width="17">&nbsp;</td>
+            <td bgcolor="#c0c0c0" width="79">
+              <h4><span style="FONT-WEIGHT: 400"><b><font face="Arial" size="2">Character</font></b></span></h4>
+            </td>
+            <td bgcolor="#c0c0c0">
+              <h4><span style="FONT-WEIGHT: 400"><b><font face="Arial" size="2">Value
+                      represented</font></b></span></h4>
+            </td>
+          </tr>
+          <tr>
+            <td width="17">&nbsp;</td>
+            <td width="79">
+              <h4><span style="FONT-WEIGHT: 400"><font face="Arial" size="2">H</font></span></h4>
+            </td>
+            <td>
+              <h4><span style="FONT-WEIGHT: 400"><font face="Arial" size="2">Homer
+                    Simpson (controlled by the player)</font></span></h4>
+            </td>
+          </tr>
+          <tr>
+            <td width="17">&nbsp;</td>
+            <td width="79">
+              <h4><span style="FONT-WEIGHT: 400"><font face="Arial" size="2">#</font></span></h4>
+            </td>
+            <td>
+              <h4><span style="FONT-WEIGHT: 400"><font face="Arial" size="2">A
+                    building (cannot be entered)</font></span></h4>
+            </td>
+          </tr>
+          <tr>
+            <td width="17">&nbsp;</td>
+            <td width="79">
+              <h4><span style="FONT-WEIGHT: 400"><font face="Arial" size="2">E</font></span></h4>
+            </td>
+            <td>
+              <h4><font face="Arial" size="2"><span style="FONT-WEIGHT: 400">Agents
+                    of the EPA (controlled by the computer)</span></font></h4>
+            </td>
+          </tr>
+          <tr>
+            <td width="17">&nbsp;</td>
+            <td width="79">
+              <h4><font face="Arial" size="2"><span style="FONT-WEIGHT: 400">~</span></font></h4>
+            </td>
+            <td>
+              <h4><span style="FONT-WEIGHT: 400"><font face="Arial" size="2">Water 
+				(Homer can enter, EPA agents cannot)</font></span></h4>
+            </td>
+          </tr>
+          <tr>
+            <td width="17">&nbsp;</td>
+            <td width="79">
+              <h4><span style="FONT-WEIGHT: 400"><font face="Arial" size="2">S</font></span></h4>
+            </td>
+            <td>
+              <h4><span style="FONT-WEIGHT: 400"><font face="Arial" size="2">The
+                    town of Springfield </font></span>
+				<span style="FONT-WEIGHT: 400"><font face="Arial" size="2">
+				(Homer can enter, EPA agents cannot)</font></span></h4>
+            </td>
+          </tr>
+          <tr>
+            <td width="17">&nbsp;</td>
+            <td colspan="2"><font face="Arial" size="2">The space represent
+                empty parts of the game world.</font></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>In the assignment4 directory there is a [<a href="code/simpsons.py">partial
+          source code</a>] program that provides the starting positions for all
+        the characters in the list. Although it is not mandatory that you use
+        this start code, to get full credit your program must be able read in<span
+          style="color: #009900;">,</span>
+        at a minimum<span style="color: #009900;">,</span> all the starting
+        positions in all the [<a href="data/index.html">data
+          files</a>] provided. (Other data files may be used by the marker with
+        different positions but they will all consist of 20x30 game world with
+        the above set of characters).</p>
+      <p>The goal of the game is to bring Homer from Alaska (top portion of the
+        grid) back to the town of Springfield (near the bottom right). However
+        if Homer takes too long to travel out of Alaska he will freeze and the
+        player loses the game. Also if Homer moves into the water he drowns and
+        the game is lost. Finally the tireless agents of the EPA will try to
+        capture Homer and if that occurs the game is lost. The game will be run
+        on a turn-by-turn basis. A turn elapses when: Homer moves or the player
+        tries to move him (Homer ignores the command or the player tries to move 
+		Homer onto a building), Homer stays on the same square (direction 5), or the
+        player toggles the debugging mode on or off. A turn won't pass if the
+        player enters an erroneous value for the movement direction (10 or
+        larger). After Homer moves the EPA agents will move in the fashion
+        described in Point #15 below. The game continues until: 1) The player
+        has lost the game (Homer drowns, freezes or is captured...Doh!)&nbsp; 2)
+        The player has won the game...Woohoo! 3) The player has quit the game.
+        *Shrugs*</p>
+      <table id="table12" style="BORDER-COLLAPSE: collapse" border="0" cellspacing="1"
+        width="100%">
+        <tbody>
+          <tr>
+            <td colspan="3" bgcolor="#c0c0c0">
+              <h3>Features to be implemented (you will also be graded on other
+                criteria such as coding style and providing program
+                documentation as listed in the marking key):</h3>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol>
+                <li>Display an introduction each time that the game is run which
+                  provides instructions for playing the game. </li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="2">
+                <li>Display a conclusion each time that the game ends. The
+                  conclusion must show the player's game status (won, quit, or
+                  if lost how the player lost the game: captured, frozen,
+                  drowned) to get credit for those features.</li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="3">
+                <li>Displays a menu that shows the allowable directions that
+                  Homer can move which are mapped to the keypad on the
+                  keyboard. The menu should show the 4 cardinal compass points (<font
+                    face="Arial">N
+                    = 8, W = 4, E = 6, S = 2</font>). The menu should also
+                  indicate that selecting <font face="Arial">0</font> will
+                  allow the player to quit the game and selecting
+				<font face="Arial">5</font> is to 'pass' on the move. (The option for entering
+                  the debugging mode (any negative value) should not be shown in
+                  the movement menu because it's supposed to be a hidden 'cheat'
+                  function).</li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="4">
+                <li>The starting positions for the objects in the game are
+                  loaded from a file. (If
+                  you use the default initialization method that's provided in
+                  the starting '<font face="Consolas">simpsons.py</font>' file
+                  in the assignment directory you will only be awarded a partial
+                  grade at most for features labeled "File input required").
+                  That's because the marker needs to be able to quickly
+                  determine if a feature is working).</li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="5">
+                <li>Homer can be moved in the four cardinal compass directions
+                  (to get credit for Feature#3 your program merely has to <i>display</i>
+                  the menu whereas to get credit for this point your program has
+                  <i>implemented</i> the code that actually makes Homer move).
+                  Entering #5 will result in the player 'passing' on Homer's
+                  move for this turn (time passes i.e., a count is made to
+                  determine if Homer freezes and the EPA agents can move). </li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="6">
+                <li>If the player tries to move Homer in one of the
+                  inter-cardinal compass directions (NW, NE, SW, SE) an
+                  appropriate error message will be displayed e.g., "<font face="Consolas">Homer
+                    doesn't know how to move that way</font>" and Homer will not
+                  move. </li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="7">
+                <li>If the player tries to enter a value larger than 9 for the
+                  movement direction another error message will be provided.
+                  (Because it's a user error rather than an intentional skipping
+                  of a turn (Feature #5) time in the game does <i>not</i>
+                  elapse in this case i.e., the EPA agents don't move). The
+                  player will be prompted again for his/her selection.</li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="8">
+                <li>Entering zero for the direction of movement will allow the
+                  player to quit the game. </li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="9">
+                <li>Entering a negative number for the direction of movement
+                  will toggle debugging messages on and off by using the global
+                  '<font face="Consolas">debug</font>' flag. Note that
+                  this is the one exception on prohibition on the use of global
+                  variables. To get credit for this feature you have to use the
+                  debugging flag and an output message at least once in your
+                  program. The exact content of these debugging messages (e.g.,
+                  showing function calls, showing the contents of variables at
+                  different points in your program) are left to your discretion
+                  but as the name implies they should be used to help you debug
+                  your program. (<i>JT's hint: you should implement this feature
+                    early on so you can actually use it to help you debug your
+                    program because this is a complex assignment it will
+                    actually help you in the development process. You shouldn't
+                    implement it at the end merely to fulfill the assignment
+                    requirements when it's too late to help you fix the errors
+                    in your game because that defeats the whole purpose of
+                    writing a debugging tool</i>). Also note the features that
+                  involve random events (No. 12, 15) not only require that you
+                  implement debugging messages to get credit for that feature
+                  but also that the debugging messages display the required
+                  information (so your marker can quickly determine if the
+                  feature is correctly implemented or not). All debugging
+                  messages must be preceded by 3 angled brackets and followed by
+                  three angled brackets. e.g. p<font face="Consolas">rint("&lt;&lt;&lt;
+                    Calling function displayWorld() &gt;&gt;&gt; ")</font><font
+                    face="Times New Roman">
+                    to allow quick recognition of when they're employed.</font></li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="10">
+                <li>(<i>File input required</i>) The game prevents Homer from
+                  entering an occupied square (contains a building or an EPA
+                  agent). A suitable error message should be displayed and time
+                  will pass as normal (EPA agents move, Homer's time in the
+                  arctic counts another turn).</li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="97%">
+              <ol start="11">
+                <li>If Homer enters the water, he drowns and the game ends (with
+                  an appropriate consolation message for the player). </li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="97%">
+              <ol start="12">
+                <li>The game adds to an unfocused, easily distracted side to
+                  Homer's personality (which is pretty much an actual
+                  personality trait of the character Homer Simpson). Each turn
+                  that the player tries to move Homer (direction 2, 4, 6, 8)
+                  there is a 25% chance that Homer finds something more
+                  interesting at his current location. To get credit for this
+                  feature your program should indicate to the player that Homer
+                  has become distracted this turn and refuses to move (e.g., "<font
+                    face="Consolas">Homer
+                    becomes distracted and refuses to move</font>") but it
+                  doesn't have to be as elaborate as the ones in the sample
+                  output files. Time will pass even if Homer is distracted and
+                  'wastes time'.</li>
+              </ol>
+              <ol start="12">
+                <p><u>Required output of the debugging messages</u>:</p>
+                <font face="Consolas"><b>Format:</b></font>
+                <ol start="24">
+                  <font face="Consolas">&lt;&lt;&lt; Randomly generated result
+                    &gt;&gt;&gt;</font><br>
+                  <font face="Consolas">&lt;&lt;&lt; A list that shows for each
+                    possible randomly generated number (or range of numbers) how
+                    the program will react.</font><br>
+                  <font face="Consolas">&lt;&lt;&lt; The way that the program
+                    actually reacted for the random number generated
+                    &gt;&gt;&gt;</font>
+                  <p></p>
+                </ol>
+                <span style="FONT-WEIGHT: 700">
+                  <p>Example program output:
+                </span>
+                <span style="FONT-WEIGHT: 400">
+                  <ol start="24">
+                    <font face="Consolas" size="3">&lt;&lt;&lt; Number randomly
+                      generated = 24 &gt;&gt;&gt;</font><br>
+                    <font face="Consolas" size="3">&lt;&lt;&lt; Number = 1 - 25,
+                      Homer is distracted &gt;&gt;&gt;</font><br>
+                    <font face="Consolas" size="3">&lt;&lt;&lt; Number = 26 to
+                      100, Homer follows the player's movement instructions
+                      &gt;&gt;&gt;</font><br>
+                    <font face="Consolas">&lt;&lt;&lt; </font>
+                    <span style="FONT-WEIGHT: 400"> <font face="Consolas">Homer
+                        becomes distracted and refuses to move </font>
+                    </span> <font face="Consolas">&gt;&gt;&gt;</font>
+                    </ol>
+                </span>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="13">
+                <li>The game tracks the amount of time that Homer spends in
+                  Alaska (top six rows of the grid - start counting at the row
+                  that consists entirely of water). Homer can only remain in
+                  this area for 10 turns before he freezes.&nbsp; To get credit
+                  for this feature, each time that the game shows the grid it
+                  also displays how long Homer has been in Alaska and how much
+                  time he has left. There is a simple and an enhanced version of
+                  this feature (you can only get credit for one version). With
+                  either version when his time runs out Homer freezes and the
+                  game ends (with a suitable consolation message being
+                  displayed). </li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td width="3%">&nbsp;</td>
+            <td width="94%">
+              <ol type="a">
+                <li>Simple version: If Homer spends a total of 10 turns in
+                  Alaska he freezes. Those turns <i>don't have to be successive</i>
+                  ones. If Homer leaves and re-enters Alaska the count down for
+                  his 'time remaining before he freezes' will continue where it
+                  left off. </li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td width="3%">&nbsp;</td>
+            <td width="94%">
+              <ol start="2" type="a">
+                <li>Enhanced version: Homer has to spend a total of <i>10
+                    successive</i> turns in Alaska before he freezes. If he
+                  leaves and re-enters Alaska then the count down will start
+                  again at the beginning (he has 10 turns before he freezes). </li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="14">
+                <li>(<i>File input required</i>) When Homer makes it back to
+                  Springfield (moves on top of the square marked 'S') the game 
+				is won and a suitable congratulatory message should be 
+				displayed. If Homer reaches Springfield just as an EPA agent 
+				catches him it's deemed that he has reached a safe haven in time 
+				and the player wins the game and suitable congratulatory message 
+				is displayed (image below).</li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td width="3%">
+              &nbsp;</td>
+            <td width="94%">
+              <img border="0" src="index.3.gif" width="544" height="318"></td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td width="3%">
+              &nbsp;</td>
+            <td width="94%">
+              &nbsp;</td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="15">
+                <li>The agents of the EPA can move (in a purely random fashion,
+                  equal probability for each outcome). <i>Agents will only move
+                    to an empty</i> (contains a space) <i>and adjacent square</i>
+                  with a one in nine probability of a particular square being
+                  picked (there's eight agent squares plus there's a chance that
+                  the agent won't move). That mean's that agents don't 'drown' 
+				or try move onto squares that contain buildings.&nbsp; (<i>JT's hint: to implement this
+                    feature properly you need some way to track the (row/column
+                    coordinates of each agent in a fashion somewhat similar to
+                    how you tracked Homer's location- except that you now must
+                    track 6 pairs of row/column coordinates instead of just one
+                    pair. The sample starting code uses a 2D list to track this 
+				information. This feature is more challenging than the others so
+                    you should leave it to near the end</i>). </li>
+              </ol>
+              <span style="FONT-WEIGHT: 400">
+                <ol start="30">
+                  <p>
+                    <span style="FONT-WEIGHT: 400"> <u>Required output of the
+                        debugging messages</u>: similar to Feature #12 in order
+                      to get credit for this feature your program must display
+                      specific output messages that clearly indicate to the
+                      marker that your program is working.</span></p>
+                  <span style="FONT-WEIGHT: 700">
+                    <p>General format:<br>
+                  
+                  </span>
+                    <font face="Consolas" size="3"><i>&lt;&lt;&lt; &lt;The
+                          randomly generated movement direction&gt;</i>,
+                        <i>&lt;The current (row/column) before the move&gt;</i>,
+                        <i>&lt;The destination (row/column) after the move&gt;
+                          &gt;&gt;&gt;</i></font></p>
+                  <span style="FONT-WEIGHT: 700">
+                    <p>Example program output:<br>
+                  </span>
+                  	<font face="Consolas" size="3">&lt;&lt;&lt; Agent
+                        direction: 2, Agent source (r/c): (8/9), Agent
+                        destination (r/c): (9/9) &gt;&gt;&gt;</font></ol>
+              </span></td>
+          </tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td colspan="2" width="98%">
+              <ol start="16">
+                <li>(<i>File input required</i>) The game can detect when an EPA
+                  agent is in a square that is adjacent to Homer 
+    <span style="FONT-WEIGHT: 400">
+      			(up to 8 surrounding squares if Homer isn't near the edges)
+    </span>
+  				and will immediately end the
+                  game (with a suitable consolation message being displayed). </li>
+              </ol>
+            </td>
+          </tr>
+        	<tr>
+    <span style="FONT-WEIGHT: 400">
+            <td width="2%">&nbsp;</td>
+            <td width="3%">
+              &nbsp;</td>
+            <td width="94%">
+              <img border="0" src="index.1.gif" width="83" height="34"></td>
+    </span>
+  		</tr>
+			<tr>
+    <span style="FONT-WEIGHT: 400">
+            <td width="2%">&nbsp;</td>
+            <td width="3%">
+              &nbsp;</td>
+            <td width="94%">
+              Prior to player's move: Homer and agent are in close proximity</td>
+    </span>
+  		</tr>
+			<tr>
+    <span style="FONT-WEIGHT: 400">
+            <td width="2%">&nbsp;</td>
+            <td width="3%">
+              &nbsp;</td>
+            <td width="94%">
+              &nbsp;</td>
+    </span>
+  		</tr>
+			<tr>
+    <span style="FONT-WEIGHT: 400">
+            <td width="2%">&nbsp;</td>
+            <td width="3%">
+              &nbsp;</td>
+            <td width="94%">
+              <img border="0" src="index.2.gif" width="532" height="387"></td>
+    </span>
+  		</tr>
+			<tr>
+    <span style="FONT-WEIGHT: 400">
+            <td width="2%">&nbsp;</td>
+            <td width="3%">
+              &nbsp;</td>
+            <td width="94%">
+              Player tries to move Homer but the command is ignored. The agent 
+				moves adjacent to Homer and captures him: the game immediately 
+				ends and a suitable consolation message is displayed.</td>
+    </span>
+  		</tr>
+          <tr>
+            <td width="2%">&nbsp;</td>
+            <td width="3%">
+              &nbsp;</td>
+            <td width="94%">
+              &nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Resources available</h3>
+      <h4><span style="font-weight: 400">In the course directory under the path:
+          <font face="Consolas">/home/231/assignments/assignment4</font> you
+          will find a number of resources:</span></h4>
+      <ul>
+        <li>The subdirectory called "<font face="Consolas">code</font>" includes
+          any relevant code examples including the starting skeleton program "<font
+            face="Consolas">simpsons.py</font>".
+          This program doesn't do very much, the starting positions are
+          'hard-coded' rather than dynamically read from file and the world is
+          displayed. It is up to you to write all the other features required
+          for this assignment.</li>
+        <li>The subdirectory called "<font face="Consolas">data</font>" includes
+          different starting data files for your program. Different positions
+          for Homer and the EPA agents are shown in these files and they will
+          allow you (and your marker) to quickly determine if particular
+          features have been implemented.</li>
+        <li>The subdirectory called "<font face="Consolas">outputs</font>"
+          includes sample output runs of a solution to the program.</li>
+      </ul>
+      <h3>Submitting your work:</h3>
+      <span lang="EN">
+        <ol>
+          <li>Assignments (the source code/'<font face="Consolas">dot-py'</font>
+            file) must be electronically submitted according to <a href="../requirements.html">
+              the assignment submission requirements</a> using <a target="_blank"
+              href="https://d2l.ucalgary.ca/">D2L</a>.
+          </li>
+          <li>As a reminder, you are not allowed to work in groups for this
+            class. <span style="FONT-WEIGHT: 400">Copying the work of another
+              student will be regarded as academic misconduct (cheating).&nbsp;
+              For additional details about what is and is not okay for this
+              class please refer to the<span style="FONT-WEIGHT: bold"> </span>
+              <a href="../misconduct.html">
+                notes on misconduct for this course</a></span><span style="FONT-WEIGHT: 700">.</span>
+          </li>
+          <li>Before you submit your assignment here is a [<a href="marking.html">checklist</a>] of items
+            to be used in marking. </li>
+        </ol>
+      </span>
+      <table id="table9" style="BORDER-COLLAPSE: collapse" border="0" cellpadding="0"
+        width="100%">
+        <tbody>
+          <tr>
+            <td width="100%">
+              <p><sup>1 This from the view of a student who is new to
+                  programming the design and problem solving issues faced in
+                  this assignment are non-trivial. It's worth noting that
+                  compared to an actual commercial system that this software is
+                  still quite small.</sup></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </span>
+  </body>
+
+<!-- Mirrored from pages.cpsc.ucalgary.ca/~tamj/231/assignments/assignment4/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Dec 2014 04:10:58 GMT -->
+</html>

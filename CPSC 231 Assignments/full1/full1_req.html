@@ -1,0 +1,316 @@
+<html>
+
+
+<!-- Mirrored from pages.cpsc.ucalgary.ca/~tamj/231/assignments/assignment1/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Dec 2014 04:09:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>CPSC 231: Assignment 1 (UNIX and programming introduction)</title>
+</head>
+
+<body>
+
+<table border="0" width="100%" id="table24">
+  <tr>
+    <td width="71%">Computer Science I for majors by
+    <a href="http://pages.cpsc.ucalgary.ca/~tamj">James Tam</a></td>
+    <td width="29%">
+	<p align="right"><a href="http://pages.cpsc.ucalgary.ca/PC/lectures/231/index.html">Return to the course web page</a></td>
+  </tr>
+</table>
+<h2 align="center">CPSC 231: Assignment 1</h2>
+<p><span style="font-weight: 400;"><i>Due Friday September 26 at 4 PM</i></span></p>
+<table id="table25" border="0" width="20%">
+  <tr>
+    <td width="48%" bgcolor="#CCCCCC" align="left" valign="top"><font face="Arial" size="2"><b>
+	Min raw score</b></font></td>
+    <td width="25%" bgcolor="#CCCCCC" align="left" valign="top"><b>
+	<font face="Arial" size="2">Grade point</font></b></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">61</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">4.0</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">60</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">3.9</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">59</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">3.8</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">58</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">3.7</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">57</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">3.6</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">56</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">3.5</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">55</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">3.4</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">54</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">3.3</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">53</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">3.2</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">52</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">3.1</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">51</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">3.0</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">49</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">2.9</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">47</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">2.8</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">45</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">2.7</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">43</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">2.6</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">41</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">2.5</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">39</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">2.4</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">37</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">2.3</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">35</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">2.2</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">33</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">2.1</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">31</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">2.0</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">29</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">1.9</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">27</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">1.8</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">25</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">1.7</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">23</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">1.6</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">21</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">1.5</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">19</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">1.4</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">17</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">1.3</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">15</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">1.2</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">13</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">1.1</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">11</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">1.0</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">9</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">0.7</font></td>
+  </tr>
+  <tr>
+    <td width="48%" align="left" valign="top"><font face="Arial" size="2">Less 
+	than 9</font></td>
+    <td width="25%" align="left" valign="top"><font face="Arial" size="2">0.0</font></td>
+  </tr>
+</table>
+<h3>New Concepts to be applied for the assignment</h3>
+<ul>
+  <li>Learning how to complete common tasks using UNIX and creating a complete 
+  Python program from the ground up</li>
+</ul>
+<h3>Part I: Introduction to UNIX, using common commands (<i>30 marks: each 
+graded step is worth 2 marks</i>)</h3>
+<h4 style="margin-left: 7.2pt">On the UNIX workstations in the Computer Science 
+lab complete the following steps.<span style="font-weight: 400"> (JT: creating a 
+typescript file literally records everything: output shown onscreen as well as every 
+character that you type into a text file. Pressing the backspace or delete key 
+will not delete what's recorded into the file, instead that keyboard character 
+will be translated to a gibberish character. If you make a typographical error 
+then DON'T try to delete it during the typescript. Instead just hit enter once 
+or twice - so there will be a few blank lines in the script file - and then 
+re-enter the command properly. Also you will create a directory called '231' 
+under your home directory, this is not the same as the official course directory 
+which is located under <font face="Consolas">/home/231</font>. Don't mix the two up!)</span></h4>
+<ol>
+  <li>
+  <p style="margin-left: 7.2pt"><span style="font-weight: 400">Login to your 
+  UNIX account*</span></li>
+  <li>
+  <p style="margin-left: 7.2pt">Start a script session *</li>
+  <li>
+  <p style="margin-left: 7.2pt">Show the contents of your home directory (<i>1 
+	mark</i>)</li>
+  <li>
+  <p style="margin-left: 7.2pt">Show your location (path) in the UNIX file 
+  system (<i>1 mark</i>)</li>
+  <li>
+  <p style="margin-left: 7.2pt">Make a new directory called '231' (<i>1 mark</i>)</li>
+  <li>
+  <p style="margin-left: 7.2pt">Show the contents of your home directory (<i>1 
+	mark</i>)</li>
+  <li>
+  <p style="margin-left: 7.2pt">Go to the official course directory for CPSC 231 (<font face="Consolas">/home/231</font>) 
+	(<i>1 mark</i>)</li>
+  <li>
+  <p style="margin-left: 7.2pt">Show your location (path) in the UNIX file 
+  system (<i>1 mark</i>)</li>	<li>
+  <p style="margin-left: 7.2pt">Show the contents of the official CPSC 231 directory (<i>1 
+	mark</i>)</li>
+  <li>	<p style="margin-left: 7.2pt">Go to the directory for the CPSC 231 Assignment 1 
+  (<font face="Consolas">/home/231/assignments/assignment1</font>) (<i>1 mark</i>)</li>	<li>	<p style="margin-left: 7.2pt">	<span style="font-variant: normal; font-style: normal; font-family: Times New Roman; font-weight: normal">Display</span> the contents of the file called '<font face="Consolas">index.txt</font>' 
+	onscreen (<i>JT's hint for this step: don't try to view it with an editor such 
+	as 'emacs' or 'vi'</i>). (<i>1 mark</i>)</li>	<li>	<p style="margin-left: 7.2pt">Try to delete the '<font face="Consolas">index.txt</font>' file 	<i>[JT's 
+  Hint: you aren't supposed to be able to complete this step successfully but 
+  instead you should get an error message. Take away learning: you only have 
+	limited file permissions in the course directory] </i>(<i>1 mark</i>) </li>	<li>	<p style="margin-left: 7.2pt">Copy the '<font face="Consolas">index.txt</font>' 
+	file to the newly created '<font face="Consolas">231</font>' 
+  directory <b>that you created in your home directory</b> (<i>1 mark</i>)</li>	<li>	<p style="margin-left: 7.2pt">Go to the '<font face="Consolas">231</font>' directory that is located in your 
+  home directory (<i>1 mark</i>)</li>	<li>	<p style="margin-left: 7.2pt">Show the contents of the '<font face="Consolas">231</font>' directory.&nbsp; (It 
+  should include the file '<font face="Consolas">index.txt</font>' now.) 
+	(<i>1 mark</i>)</li>	<li>	<p style="margin-left: 7.2pt">Delete the '<font face="Consolas">index.txt</font>' 
+	file from your <font face="Consolas">231</font> directory [<i>JT's comment: it should work now because it's a 
+	directory that you created not the course directory</i>] (<i>1 mark</i>)</li>	<li>
+	<p style="margin-left: 7.2pt">Show the contents of the '<font face="Consolas">231</font>' 
+	directory.&nbsp; (The file should be gone now.) (<i>1 mark</i>)</li>
+	<li>
+	<p style="margin-left: 7.2pt">End the script session*</li>
+	<li>
+	<p style="margin-left: 7.2pt">Submit your assignment (the file called 
+  &quot;<font face="Consolas">typescript</font>&quot; using D2L as described on the course web page 
+  [<a target="_blank" href="https://d2l.ucalgary.ca/shared/LE_Basics_Videos/index.htm">D2L link</a>]).*</li>
+</ol>
+
+<p style="margin-left: 7.2pt">The lines marked with a star '*' don't directly 
+yield any marks but must still be completed in order for Part 1 of the 
+assignment to be marked. You will either receive full marks on a step in Part I 
+or no credit. You don't need to include contact information in the typescript (partly because some of it will be displayed in Step #4 but mostly because you will be including this information in Part II).</p>
+<h3 style="margin-left: 7.2pt">Part II: Creating your first Python program (<i>31 
+marks</i>)</h3>
+<p style="margin-left: 7.2pt">Write a Python program that will calculate your 
+term grade point based on the weights specified in the course admin notes (slide 
+18 - 20): 
+[<a href="../../notes/powerPoint/course_intro_admin.ppt">PowerPoint file</a>] [<a href="../../notes/acrobat/course_intro_admin.pdf">PDF file</a>]. The program will prompt the user for the grade 
+point for each component and calculate the weighted grade point for that 
+component. Finally the program will display the weighted grade points for the 4 
+major components: mini assignments, regular assignments, midterm and the final 
+exam. This output must appear at the very end of your program with each weighed 
+grade on it's own line (see image). Weighted grade points should only display 
+two places of precision for the rational component (although all rational digits can be used when performing 
+calculations - no rounding is needed this is just for the formatting of output). All output should be neat and presentable. You should employ good naming conventions for variable names and be sure to include the required contact information (your name, student identification number and tutorial number) in the header of the program. Your program doesn't have to error check 
+the type of input (i.e., if the user enters a non-numeric value by mistake) nor 
+does it have to error check the range (i.e., the person enters a grade point 
+beyond the valid range of values). J<i>T's final hint: don't try to type in the 
+whole program all at once, especially when calculating and displaying all the 
+assignment grades. Try it for just one component, make sure it works before 
+adding the information for the other components.</i></p>
+<p style="margin-left: 7.2pt">Submit your assignment (the file containing the 
+grade calculating program using D2L as described on the course web page 
+  [<a target="_blank" href="https://d2l.ucalgary.ca/shared/LE_Basics_Videos/index.htm">D2L link</a>])</p>
+
+<p style="margin-left: 7.2pt">
+<img border="0" src="index.1.gif"></p>
+<div align="left">
+	<table border="0" width="80%" cellpadding="3" cellspacing="3">
+		<tr>
+			<td bgcolor="#CCCCCC" align="left" valign="top" width="767"><b>
+			<font size="2" face="Arial">Program feature (Part II)</font></b></td>
+			<td bgcolor="#CCCCCC" align="left" valign="top"><b>
+			<font face="Arial" size="2">Marks</font></b></td>
+		</tr>
+		<tr>
+			<td align="left" valign="top" width="767">
+			<font size="2" face="Arial">Prompts for each component (6 mini 
+			assignments, 5 full assignments, 2 exams): 1 mark each</font></td>
+			<td align="left" valign="top"><font size="2" face="Arial">13</font></td>
+		</tr>
+		<tr>
+			<td align="left" valign="top" width="767">
+			<font face="Arial" size="2">Correctly calculates and displays 
+			weighted grades for each component (mini-assignment, full 
+			assignment, midterm exam, final exam): 2 marks for each component 
+			calculated and displayed</font></td>
+			<td align="left" valign="top"><font size="2" face="Arial">8</font></td>
+		</tr>
+		<tr>
+			<td align="left" valign="top" width="767">
+			<font face="Arial" size="2">Correctly calculates and displays 
+			overall term grade point (individual weighted values must be 
+			correct)</font></td>
+			<td align="left" valign="top"><font face="Arial" size="2">2</font></td>
+		</tr>
+		<tr>
+			<td align="left" valign="top" width="767">
+			<font face="Arial" size="2">The display of each weighted grade point 
+			only shows two rational digits: 5 grades displayed with each output 
+			worth 1 mark</font></td>
+			<td align="left" valign="top"><font face="Arial" size="2">5</font></td>
+		</tr>
+		<tr>
+			<td align="left" valign="top" width="767">
+			<font face="Arial" size="2">Required contact information included in 
+			the program documentation (name, student identification, tutorial 
+			number)</font></td>
+			<td align="left" valign="top"><font face="Arial" size="2">3</font></td>
+		</tr>
+		<tr>
+			<td align="left" valign="top" width="767"><b>
+			<font face="Arial" size="2">Total for Part II</font></b></td>
+			<td align="left" valign="top"><b><font face="Arial" size="2">31</font></b></td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+
+<!-- Mirrored from pages.cpsc.ucalgary.ca/~tamj/231/assignments/assignment1/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Dec 2014 04:09:27 GMT -->
+</html>

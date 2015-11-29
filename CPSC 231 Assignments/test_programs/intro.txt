@@ -1,0 +1,38 @@
+                      ,;-.
+                    ,((--\).
+                   /        \
+                  |          |
+                  |          |
+                 (,'"`.  ,'"`.)
+                 :     \/     ;
+                 `.o  ,'`.  o,'
+                 (|`>'`--'`<'|)            ,-,
+     ,.           |/        \|         ,-./ /
+   _ | \,-.       (          )        | `-'`--.
+  ( `' (_/|__      \   (o   /       ,-'     ,-'
+   ;         )    ,|`.  - ,'|.      `-.   ) \
+   | (    ,-'   _/ `-.`""',-' \---.   /      ;
+   |     |   ,-'  \  /\  / \  |   |--/       |
+   |     |_,|    / \/  \/   \/\   |          |
+   |     `  \   |              \  /        ,'
+   |         \  |              | /      _,'
+   :          \ ,              `/------'
+    `-.___,---')                `.
+             ,'                   \
+=================================================
+              The Simpson’s Game!
+=================================================
+Homer is trapped in Alaska and needs to make it
+back to Springfield. There’s only one problem:
+the EPA Agents are after him!
+
+Help Homer (H) get back to Springfield (S) before
+the EPA Agents (E) catch him! But don’t take too
+long, or Homer will freeze in the arctic (the top
+6 rows of the map)!
+
+Homer is also prone to silly mistakes: if you
+enter the water (~), you’ll freeze. Homer
+might not always listen to your commands either,
+so be strategic!
+=================================================

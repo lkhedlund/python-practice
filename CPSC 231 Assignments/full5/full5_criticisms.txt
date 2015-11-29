@@ -1,0 +1,8 @@
+NOTES ABOUT THIS ASSIGNMENT:
+
+If I was to design this assignment I would remove a lot of the
+redundant code. Target and Pursuer both 'act the same', so a Class
+they can both use to pull attributes and methods from would be far
+more efficient. I would choose this approach for the assignment if
+ the guidelines didn't require me to follow the strict rules of
+ each having their own attributes and methods.  

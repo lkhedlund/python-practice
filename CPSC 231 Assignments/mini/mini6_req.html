@@ -1,0 +1,365 @@
+<html>
+
+
+<!-- Mirrored from pages.cpsc.ucalgary.ca/~tamj/231/assignments/mini_assignment6/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Dec 2014 04:14:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>CPSC 231: Mini-assignment 6</title>
+<style>
+<!--
+ table.MsoNormalTable
+
+
+
+
+
+
+
+	{mso-style-parent:"";
+
+
+
+
+
+
+
+	font-size:10.0pt;
+
+
+
+
+
+
+
+	font-family:"Times New Roman","serif"}
+
+
+
+
+
+
+
+ li.MsoNormal
+
+	{mso-style-parent:"";
+
+	margin-top:0in;
+
+	margin-right:0in;
+
+	margin-bottom:10.0pt;
+
+	margin-left:0in;
+
+	line-height:115%;
+
+	font-size:11.0pt;
+
+	font-family:"Calibri","sans-serif";
+
+	}
+
+body{behavior:url("http://pages.cpsc.ucalgary.ca/w/static-1.25wmf6/skins/Vector/csshover.min.htc")}-->
+</style>
+</head>
+
+<body>
+<table id="table24" width="100%" border="0">
+	<tr>
+		<td width="71%">Computer Science I for majors by
+		<a href="http://pages.cpsc.ucalgary.ca/~tamj">James Tam</a></td>
+		<td width="29%">
+		<p align="right"><a href="../231/index.html">Return to the course web 
+		page</a></td>
+	</tr>
+</table>
+<h2 align="center">CPSC 231: Mini-Assignment #6</h2>
+<h3><i><span style="FONT-WEIGHT: 400">Due <font size="3">Monday December 1<span style="FONT-FAMILY: 'Times New Roman',serif">,</span></font> 
+at 4 PM </span></i>
+</h3>
+<h3>New Concepts to be applied for the assignment</h3>
+<ul>
+	<li>Defining classes, creating and working with objects</li>
+</ul>
+<h3>Description</h3>
+<span lang="EN"></span>
+<span lang="EN">
+<p>Your program must consist of three classes (as described below). </p>
+<table width="100%" border="0" cellpadding="2">
+	<tr>
+		<td colspan="4">
+		<ul>
+			<li>Defines a class '<font face="Consolas">Cat</font>' (9 marks)</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td width="2%">&nbsp;</td>
+		<td width="94%" colspan="3">
+		<ul type="disc" style="margin-top: 0in; margin-bottom: 0in;">
+			<li class="MsoNormal"><font face="Times New Roman" size="3">
+			&nbsp;Attributes: </font><font face="Consolas" size="3">name</font><font face="Times New Roman" size="3"> 
+			(String) and </font><font face="Consolas" size="3">age</font><font face="Times New Roman" size="3"> 
+			(numeric) (<b>2 marks</b>)</font></li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td width="2%">&nbsp;</td>
+		<td width="94%" colspan="3">
+		<ul>
+			<li>Methods: </li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td width="2%">&nbsp;</td>
+		<td width="1%">&nbsp;</td>
+		<td width="1%">&nbsp;</td>
+		<td width="93%" rowspan="4">
+		<ul>
+			<li>An &quot;<font face="Consolas">init()</font>&quot; constructor that sets 
+			the <font face="Consolas">name</font> and <font face="Consolas">age</font> 
+			attributes to obvious default starting values (e.g., &quot;<font face="Consolas">no 
+			name</font>&quot; for the name and <font face="Consolas">-1</font> for 
+			the age) (<b>2 marks</b>)</li>
+		</ul>
+		<ul>
+			<li>Accessor '<font face="Consolas">get()</font>' methods: one 
+			method will return the name, one method will return the age back to 
+			the caller of the method (<b>2 marks</b>)</li>
+		</ul>
+		<ul>
+			<li>Mutator '<font face="Consolas">set()</font>' methods: a method 
+			that takes one argument in addition to the '<font face="Consolas">self</font>' 
+			parameter. The value of that argument will be used to set the value 
+			of an attribute. There should be one set method for each attribute. 
+			(<b>2 marks</b>)</li>
+		</ul>
+		<ul>
+			<li>A '<font face="Consolas">makeSound()</font>' method that 
+			displays the message 'meow' onscreen when called (<b>1 mark</b>)</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td width="2%" height="43">&nbsp;</td>
+		<td width="1%" height="43">&nbsp;</td>
+		<td width="1%" height="43">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="2%" height="43">&nbsp;</td>
+		<td width="1%" height="43">&nbsp;</td>
+		<td width="1%" height="43">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="2%" height="43">&nbsp;</td>
+		<td width="1%" height="43">&nbsp;</td>
+		<td width="1%" height="43">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+		<ul>
+			<li>Defines a class '<font face="Consolas">Dog</font>' (9 marks)</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td width="2%">&nbsp;</td>
+		<td width="94%" colspan="3">
+		<ul type="disc" style="margin-top: 0in; margin-bottom: 0in;">
+			<li class="MsoNormal"><font face="Times New Roman" size="3">
+			&nbsp;Attributes: </font><font face="Consolas" size="3">name</font><font face="Times New Roman" size="3"> 
+			(String) and </font><font face="Consolas" size="3">age</font><font face="Times New Roman" size="3"> 
+			(numeric) (<b>2 marks</b>)</font></li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td width="2%">&nbsp;</td>
+		<td width="94%" colspan="3">
+		<ul>
+			<li>Methods: </li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td width="2%">&nbsp;</td>
+		<td width="1%">&nbsp;</td>
+		<td width="1%">&nbsp;</td>
+		<td width="93%" rowspan="4">
+		<ul>
+			<li>
+<span lang="EN">
+			An &quot;<font face="Consolas">init()</font>&quot;
+</span>
+		
+			constructor that sets the <font face="Consolas">name</font> and
+			<font face="Consolas">age</font> attribute to obvious default 
+			starting values (e.g., &quot;<font face="Consolas">no name</font>&quot; for 
+			the name and <font face="Consolas">-1</font> for the age) (<b>2 
+			marks</b>)</li>
+		</ul>
+		<ul>
+			<li>&nbsp;<span lang="EN">Accessor '<font face="Consolas">get()</font>' 
+			methods: one method will return the name, one method will return the 
+			age back to the caller of the method</span>
+		
+			(<b>2 marks</b>)</li>
+		</ul>
+		<ul>
+			<li>
+<span lang="EN">
+			Mutator '<font face="Consolas">set()</font>' methods: a method that 
+			takes one argument in addition to the '<font face="Consolas">self</font>' 
+			parameter. The value of that argument will be used to set the value 
+			of an attribute. There should be one set method for each attribute. 
+			(<b>2 marks</b>)</span></li>
+		</ul>
+		<ul>
+			<li>&nbsp;A '<font face="Consolas">makeSound()</font>' method that 
+			displays the message 'bark' onscreen when called (<b>1 mark</b>)</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td width="2%" height="43">&nbsp;</td>
+		<td width="1%" height="43">&nbsp;</td>
+		<td width="1%" height="43">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="2%" height="43">&nbsp;</td>
+		<td width="1%" height="43">&nbsp;</td>
+		<td width="1%" height="43">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="2%" height="43">&nbsp;</td>
+		<td width="1%" height="43">&nbsp;</td>
+		<td width="1%" height="43">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="97%" height="43" colspan="4">
+		<ul>
+			<li>Defines the '<font face="Consolas">Driver</font>' class. The '<font face="Consolas">main()/driver()</font>' 
+			method will contain the following instructions (10 marks)</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td width="49%" height="43" colspan="2">&nbsp;</td>
+		<td width="48%" height="43" colspan="2">
+		<ul>
+			<li>Instantiates instances of a dog and cat (<b>2 marks</b>)</li>
+		</ul>
+		<ul>
+			<li>Displays the <font face="Consolas">name</font> and
+			<font face="Consolas">age</font> attributes of the dog onscreen, the 
+			default values should appear (<b>2 marks</b>)</li>
+		</ul>
+		<ul>
+			<li>Displays the <font face="Consolas">name</font> and
+			<font face="Consolas">age</font> attributes of the cat onscreen, the 
+			default values should appear (<b>2 marks</b>)</li>
+		</ul>
+		<ul>
+			<li>Sets the <font face="Consolas">age</font> and
+			<font face="Consolas">name</font> of the cat to 7 and 'Tigger' 
+			respectively (<b>2 marks</b>)</li>
+		</ul>
+		<ul>
+			<li>Displays the <font face="Consolas">name</font> and
+			<font face="Consolas">age</font> attributes of the cat onscreen, the 
+			new values should appear (<b>2 marks</b>)</li>
+		</ul>
+		</td>
+	</tr>
+</table>
+<h3>Marking key</h3>
+<table width="861" border="1" cellpadding="2">
+	<tr>
+		<td width="78"><font face="Arial" size="2">Marks earned</font></td>
+		<td width="27"><font face="Arial" size="2">28</font></td>
+		<td width="27"><font face="Arial" size="2">27</font></td>
+		<td width="27"><font face="Arial" size="2">26</font></td>
+		<td width="27"><font face="Arial" size="2">25</font></td>
+		<td width="27"><font face="Arial" size="2">24</font></td>
+		<td width="27"><font face="Arial" size="2">23</font></td>
+		<td width="27"><font face="Arial" size="2">22</font></td>
+		<td width="27"><font face="Arial" size="2">21</font></td>
+		<td width="27"><font face="Arial" size="2">20</font></td>
+		<td width="27"><font face="Arial" size="2">19</font></td>
+		<td width="27"><font face="Arial" size="2">18</font></td>
+		<td width="27"><font face="Arial" size="2">17</font></td>
+		<td width="28"><font face="Arial" size="2">16</font></td>
+		<td width="28"><font face="Arial" size="2">15</font></td>
+		<td width="28"><font face="Arial" size="2">14</font></td>
+		<td width="28"><font face="Arial" size="2">13</font></td>
+		<td width="28"><font face="Arial" size="2">12</font></td>
+		<td width="28"><font face="Arial" size="2">11</font></td>
+		<td width="28"><font face="Arial" size="2">10</font></td>
+		<td width="28"><font face="Arial" size="2">9</font></td>
+		<td width="28"><font face="Arial" size="2">8</font></td>
+		<td width="28"><font face="Arial" size="2">7</font></td>
+		<td width="28"><font face="Arial" size="2">6</font></td>
+		<td width="28"><font face="Arial" size="2">5</font></td>
+		<td width="28"><font face="Arial" size="2">4</font></td>
+		<td width="28"><font face="Arial" size="2">3</font></td>
+		<td width="28"><font face="Arial" size="2">2</font></td>
+		<td width="28"><font face="Arial" size="2">1</font></td>
+		<td width="28"><font face="Arial" size="2">0</font></td>
+	</tr>
+	<tr>
+		<td width="78"><font face="Arial" size="2">Grade point</font></td>
+		<td width="27"><font face="Arial" size="2">4.0</font></td>
+		<td width="27"><font face="Arial" size="2">3.9</font></td>
+		<td width="27"><font face="Arial" size="2">3.8</font></td>
+		<td width="27"><font face="Arial" size="2">3.7</font></td>
+		<td width="27"><font face="Arial" size="2">3.6</font></td>
+		<td width="27"><font face="Arial" size="2">3.5</font></td>
+		<td width="27"><font face="Arial" size="2">3.4</font></td>
+		<td width="27"><font face="Arial" size="2">3.3</font></td>
+		<td width="27"><font face="Arial" size="2">3.2</font></td>
+		<td width="27"><font face="Arial" size="2">3.1</font></td>
+		<td width="27"><font face="Arial" size="2">3.0</font></td>
+		<td width="27"><font face="Arial" size="2">2.9</font></td>
+		<td width="28"><font face="Arial" size="2">2.8</font></td>
+		<td width="28"><font face="Arial" size="2">2.7</font></td>
+		<td width="28"><font face="Arial" size="2">2.6</font></td>
+		<td width="28"><font face="Arial" size="2">2.5</font></td>
+		<td width="28"><font face="Arial" size="2">2.4</font></td>
+		<td width="28"><font face="Arial" size="2">2.3</font></td>
+		<td width="28"><font face="Arial" size="2">2.2</font></td>
+		<td width="28"><font face="Arial" size="2">2.1</font></td>
+		<td width="28"><font face="Arial" size="2">2.0</font></td>
+		<td width="28"><font face="Arial" size="2">1.8</font></td>
+		<td width="28"><font face="Arial" size="2">1.6</font></td>
+		<td width="28"><font face="Arial" size="2">1.4</font></td>
+		<td width="28"><font face="Arial" size="2">1.2</font></td>
+		<td width="28"><font face="Arial" size="2">1</font></td>
+		<td width="28"><font face="Arial" size="2">0.8</font></td>
+		<td width="28"><font face="Arial" size="2">0.6</font></td>
+		<td width="28"><font face="Arial" size="2">0.0</font></td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<h3>Submitting your work:</h3>
+<ol>
+	<li>Assignments (source code/'<font face="Consolas">dot-py</font>' file) 
+	must be electronically submitted according to [<a href="../requirements.html">the 
+	assignment submission requirements</a>] using [<a target="_blank" href="http://d2l.ucalgary.ca/">D2L</a>] 
+	</li>
+	<li>As a reminder, you are not allowed to work in groups for this class.
+	<span style="font-weight: 400;">Copying the work of another student will be 
+	regarded as academic misconduct (cheating).&nbsp; For additional details about 
+	what is and is not okay for this class please refer to the following</span> 
+	[<a href="../misconduct.html">link</a><span style="font-weight: 700;">].</span> 
+	</li>
+</ol>
+</span>
+		
+</body>
+
+
+<!-- Mirrored from pages.cpsc.ucalgary.ca/~tamj/231/assignments/mini_assignment6/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Dec 2014 04:14:12 GMT -->
+</html>

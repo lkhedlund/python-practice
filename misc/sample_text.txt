@@ -1,0 +1,4 @@
+This is the text file that is being imported for exercise 15 of "Learn Python the Hard
+Way". I've made a few necessary changes to try to improve the output a touch. The previous
+file was sort of weird, and Zed is just generally a weird author. Oh well, whatever helps
+is worth the time and effort.

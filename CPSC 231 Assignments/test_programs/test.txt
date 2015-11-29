@@ -1,0 +1,6 @@
+This is a sentence without tabs.
+	This is a sentence with one tab.
+      This is a sentence with six spaces. 
+	  This is a sentence with one tab and two spaces. 
+		This is a sentence with two tabs.
+   This is a sentence with 3 spaces. 
